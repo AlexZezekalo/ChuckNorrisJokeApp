@@ -1,4 +1,4 @@
-package com.ziko.chucknorrisjokeapp.ui.theme
+package com.ziko.app.ui.theme
 
 import android.app.Activity
 import android.os.Build
