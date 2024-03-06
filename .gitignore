@@ -1,0 +1,21 @@
+*.iml
+.gradle
+.DS_Store
+/local.properties
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Retaining
+!compiler.xml
+!gradle.xml
+!runConfigurations.xml
+!vcs.xml
+
+!codeStyles/*.xml
+!dictionaries/*.xml
+!fileTemplates/*.*
+!inspectionProfiles/*.xml
+!runConfigurations/*.xml
