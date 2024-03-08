@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 class GetJokeUseCase(private val jokeRepository: JokeRepository) {
 
-    suspend operator fun invoke(): Flow<IJoke> =
+    suspend operator fun invoke(): Flow<Result<IJoke>> =
         jokeRepository.loadJoke()
 
 }

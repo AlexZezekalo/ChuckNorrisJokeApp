@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 class GetCategoriesUseCase(private val categoryRepository: CategoryRepository) {
 
-    suspend operator fun invoke(): Flow<Categories> =
+    suspend operator fun invoke(): Flow<Result<Categories>> =
         categoryRepository.getCategories()
 }
