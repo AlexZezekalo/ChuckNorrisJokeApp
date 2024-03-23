@@ -1,4 +1,4 @@
-package com.ziko.chucknorrisjoke.app.logger
+package com.ziko.common.extensions
 
 import java.util.logging.Level
 import java.util.logging.Logger

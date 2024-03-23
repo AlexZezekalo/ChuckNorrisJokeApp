@@ -2,7 +2,8 @@ package com.ziko.chucknorrisjoke.app
 
 import android.app.Application
 import com.ziko.chucknorrisjoke.app.logger.AndroidLoggingHandler
-import com.ziko.chucknorrisjoke.app.logger.logI
+import com.ziko.common.extensions.logI
+
 
 class ChuckNorrisApp : Application() {
 
