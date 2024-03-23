@@ -41,11 +41,13 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 dependencies {
     implementation(project(":presentation"))
-    implementation(project(":domain"))
     implementation(project(":data"))
 
     testImplementation(libs.junit)
