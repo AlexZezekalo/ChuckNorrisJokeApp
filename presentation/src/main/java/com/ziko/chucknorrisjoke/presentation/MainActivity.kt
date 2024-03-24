@@ -11,10 +11,22 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.ziko.app.ui.theme.ChuckNorrisJokeAppTheme
+import com.ziko.chucknorrisjoke.presentation.di.AppComponentProvider
+import com.ziko.chucknorrisjoke.presentation.viewmodel.MainViewModel
+import javax.inject.Inject
 
 class MainActivity : ComponentActivity() {
+
+    @Inject lateinit var viewModel: MainViewModel
+
+    private fun injectDagger() {
+        (applicationContext as AppComponentProvider).inject(this)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        injectDagger()
         super.onCreate(savedInstanceState)
+
         setContent {
             ChuckNorrisJokeAppTheme {
                 // A surface container using the 'background' color from the theme
@@ -37,7 +49,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
     ChuckNorrisJokeAppTheme {

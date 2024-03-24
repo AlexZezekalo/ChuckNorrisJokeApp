@@ -53,6 +53,8 @@ dependencies {
     api(project(":domain"))
     api(project(":common"))
 
+    implementation(libs.appcompat)
+    implementation(libs.activity.compose)
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
 
