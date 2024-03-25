@@ -16,7 +16,7 @@ class AndroidLoggingHandler(
     }
 
     override fun publish(record: LogRecord) {
-        val tag = globalTag ?: record.loggerName
+        val tag = "$globalTag: ${record.loggerName}"
         val level = getAndroidLevel(record.level)
         val message = record.thrown?.let {
             "${record.message}: ${Log.getStackTraceString(it)}"

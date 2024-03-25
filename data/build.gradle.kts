@@ -8,4 +8,6 @@ dependencies {
 
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.inject)
+    api(libs.bundles.retrofit)
+    api(libs.logging.interceptor)
 }

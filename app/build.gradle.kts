@@ -22,7 +22,12 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", wrapStr("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com"))
+        }
         release {
+            buildConfigField("String", "BASE_URL", wrapStr("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com"))
+
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -62,3 +67,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.espresso.core)
 }
+
+fun wrapStr(s: String) = "\"s\""

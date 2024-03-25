@@ -7,5 +7,8 @@ interface IJoke {
     val id: String
     val text: String
     val iconUrl: String
-    val category: String?
+    val category: List<String>
+    val createdAt: String
+    val updatedAt: String
+    val webUrl: String
 }

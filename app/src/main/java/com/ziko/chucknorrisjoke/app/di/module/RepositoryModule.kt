@@ -6,14 +6,17 @@ import com.ziko.chucknorrisjoke.domain.repository.CategoryRepository
 import com.ziko.chucknorrisjoke.domain.repository.JokeRepository
 import dagger.Binds
 import dagger.Module
+import javax.inject.Singleton
 
 
 @Module
 interface RepositoryModule {
 
+    @Singleton
     @Binds
     fun bindCategoryRepository(categoryRepository: CategoryRepositoryImpl): CategoryRepository
 
+    @Singleton
     @Binds
     fun bindJokeRepository(jokeRepository: JokeRepositoryImpl): JokeRepository
 }

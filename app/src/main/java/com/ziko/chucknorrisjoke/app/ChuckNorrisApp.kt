@@ -10,7 +10,7 @@ import com.ziko.common.extensions.logI
 
 class ChuckNorrisApp : Application(), AppComponentProvider {
 
-    private val appComponent = DaggerAppComponent.create()
+    private val appComponent = DaggerAppComponent.factory().create(this)
 
     override fun onCreate() {
         super.onCreate()
@@ -19,12 +19,12 @@ class ChuckNorrisApp : Application(), AppComponentProvider {
         logI("Application is started!")
     }
 
-    companion object {
-
-        private const val GLOBAL_TAG = "TAG"
-    }
-
     override fun inject(activity: MainActivity) {
         appComponent.inject(activity)
+    }
+
+
+    companion object {
+        private const val GLOBAL_TAG = "TAG"
     }
 }
