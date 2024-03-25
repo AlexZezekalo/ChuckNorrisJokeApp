@@ -1,9 +1,11 @@
 package com.ziko.chucknorrisjoke.domain.entity
 
+import com.ziko.chucknorrisjoke.domain.entity.base.Item
+
 /*
 *   Example of domain entity as interface
 */
-interface IJoke {
+interface IJoke : Item {
     val id: String
     val text: String
     val iconUrl: String

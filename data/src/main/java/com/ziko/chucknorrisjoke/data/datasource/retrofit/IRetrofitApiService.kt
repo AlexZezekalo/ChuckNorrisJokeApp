@@ -1,10 +1,11 @@
 package com.ziko.chucknorrisjoke.data.datasource.retrofit
 
-import com.ziko.chucknorrisjoke.data.datasource.retrofit.entity.ApiCategories
-import com.ziko.chucknorrisjoke.data.datasource.retrofit.entity.ApiJoke
-import com.ziko.chucknorrisjoke.data.datasource.retrofit.entity.ApiJokeList
+import com.ziko.chucknorrisjoke.data.entity.ApiCategories
+import com.ziko.chucknorrisjoke.data.entity.ApiJoke
+import com.ziko.chucknorrisjoke.data.entity.ApiJokeList
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface IRetrofitApiService {
 
@@ -15,5 +16,5 @@ interface IRetrofitApiService {
     fun getCategories(): Response<ApiCategories>
 
     @GET("/jokes/search")
-    fun getJokesBySearch(): Response<ApiJokeList>
+    fun getJokesBySearch(@Query("query") query: String): Response<ApiJokeList>
 }

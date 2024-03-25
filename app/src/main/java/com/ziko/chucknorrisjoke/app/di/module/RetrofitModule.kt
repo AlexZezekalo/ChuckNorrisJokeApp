@@ -26,7 +26,11 @@ class RetrofitModule {
     @Provides
     fun provideLoggingInterceptor(): Interceptor = HttpLoggingInterceptor()
         .apply {
-            setLevel(HttpLoggingInterceptor.Level.BODY)
+            if (BuildConfig.DEBUG) {
+                setLevel(HttpLoggingInterceptor.Level.BODY)
+            } else {
+                setLevel(HttpLoggingInterceptor.Level.NONE)
+            }
         }
 
     @InterceptorNamed(InterceptorType.HEADERS)

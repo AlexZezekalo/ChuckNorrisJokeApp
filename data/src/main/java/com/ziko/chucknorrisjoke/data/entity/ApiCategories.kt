@@ -1,4 +1,4 @@
-package com.ziko.chucknorrisjoke.data.datasource.retrofit.entity
+package com.ziko.chucknorrisjoke.data.entity
 
 import com.google.gson.annotations.SerializedName
 
